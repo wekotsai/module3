@@ -1,16 +1,20 @@
 <template>
   <div class="test">
-    <p>My name is Mike> ANdasd fsfd</p>
+    <p> TBA </p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Test'
+  name: 'Schedule'
 }
 </script>
 
 
 <style scoped>
-
+  p{
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  }
 </style>

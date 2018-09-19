@@ -1,17 +1,34 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+  <b-navbar toggleable="md" type="dark" variant="success-outline" fixed="top">
 
-    <p><router-link to="/Home">Go to Home</router-link></p>
-    <p><router-link to="/Test">Go to Test</router-link></p>
+  <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
+  <b-navbar-brand>NYSL</b-navbar-brand>
+
+  <b-collapse is-nav id="nav_collapse">
+
+    <b-navbar-nav>
+    <Navigation></Navigation>
+    </b-navbar-nav>
+
+  </b-collapse>
+</b-navbar>
+
+    
+      <img alt="logo" src="./assets/nysl_logo.png" width="35%" vspace="50">
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+import Navigation from './components/Navigation'
+
 export default {
   name: 'app',
+  components:{
+    Navigation
+  }
 }
 </script>
 
@@ -24,4 +41,11 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+body {
+ background-image: url("./assets/iphonebg1.jpg");
+}
+
+
+
 </style>

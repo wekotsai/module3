@@ -8,8 +8,11 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "bootstrap-vue": "^2.0.0-rc.11",
+    "bulma-start": "0.0.2",
     "vue": "^2.5.17",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vue2-sidebar": "0.0.11"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.3",
