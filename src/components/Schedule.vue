@@ -117,6 +117,15 @@
 export default {
   name: 'Schedule'
 }
+
+fetch('https://api.myjson.com/bins/14bbbo')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    console.log(myJson);
+  });
+
 </script>
 
 
