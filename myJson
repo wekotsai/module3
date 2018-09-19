@@ -1,67 +1,60 @@
 {
-"Matches": [
-   {
-  "team": {
-    "name": "T1 vs T2",
-    "t1": "Arsenal",
-    "t1logo": "http://icons.iconseeker.com/png/fullsize/soccer-teams/arsenal-fc-logo.png",
-    "t2": "Manchester United",
-    "t2logo": "http://www.authenticsoccer.com/Images/ContentPages/manchester-united-fc-logo.png",
-    "location": "Emirates Stadium",
-    "matchID": "0",
-    "date": "9/19",
-    "time": "20:00",
-    "mapUrl": "https://goo.gl/maps/Y7knRLSGn422"
-     }
-   },
-   {
-  "team": {
-    "name": "T3 vs T4",
-    "t3": "FC Barcelona",
-    "t3logo": "https://pespespes.files.wordpress.com/2013/07/fc-barcelona.png",
-    "t4": "Real Madrid",
-    "t4logo": "http://www.tsv-albeck.de/cms/images/photo-934-ca34add6.png",
-    "location": O2 Stadium",
-    "matchID": "1",
-    "date": "9/22",
-    "time": "18:00",
-    "mapUrl": "https://goo.gl/maps/rtmBpgqVkTK2"
-     }
-   },
-   {
-  "team": {
-    "name": "T5 vs T6",
-    "t5": "Chelsea",
-    "t5logo": "http://files.gamebanana.com/img/ico/sprays/chelsea_copy.gif",
-    "t6": "Bayern Munich",
-    "t6logo": "http://www.veryicon.com/icon/ico/Sport/Soccer%20teams/Bayern%20Munchen%20FC%20logo.ico
-",
-    "location": "Mercedes-Benz Arena",
-    "matchID": "2",
-    "date": "9/24",
-    "time": "19:00",
-    "mapUrl": "https://goo.gl/maps/ynFFuhDTyo42"
-     }
-   },
-   {
-  "team": {
-    "name": "T7 vs T8",
-    "t7": "AC Milan",
-    "t7logo": "http://s25.postimg.org/5za2rst8v/ac_milan256x256.png",
-    "t8": "Inter Milan",
-    "t8logo": "http://s019.radikal.ru/i640/1210/86/82659ba30fae.png",
-    "location": "Allianz Stadium",
-    "matchID": "3",
-    "date": "9/25",
-    "time": "12:00",
-    "mapUrl": "https://goo.gl/maps/ja7jJwCw8pm"
-     }
-   },
-  ],
- "Teams": [
-{
-
-}
-
- ]
+  "Matches": [
+    {
+      "team": {
+        "name": "T1 vs T2",
+        "t1": "Arsenal",
+        "t1logo": "http://icons.iconseeker.com/png/fullsize/soccer-teams/arsenal-fc-logo.png",
+        "t2": "Manchester United",
+        "t2logo": "http://www.authenticsoccer.com/Images/ContentPages/manchester-united-fc-logo.png",
+        "location": "Emirates Stadium",
+        "matchID": "0",
+        "date": "9/19",
+        "time": "20:00",
+        "mapUrl": "https://goo.gl/maps/Y7knRLSGn422"
+      }
+    },
+    {
+      "team": {
+        "name": "T3 vs T4",
+        "t3": "FC Barcelona",
+        "t3logo": "https://pespespes.files.wordpress.com/2013/07/fc-barcelona.png",
+        "t4": "Real Madrid",
+        "t4logo": "http://www.tsv-albeck.de/cms/images/photo-934-ca34add6.png",
+        "location": "O2 Stadium",
+        "matchID": "1",
+        "date": "9/22",
+        "time": "18:00",
+        "mapUrl": "https://goo.gl/maps/rtmBpgqVkTK2"
+      }
+    },
+    {
+      "team": {
+        "name": "T5 vs T6",
+        "t5": "Chelsea",
+        "t5logo": "http://files.gamebanana.com/img/ico/sprays/chelsea_copy.gif",
+        "t6": "Brazil FC",
+        "t6logo": "http://icons.iconarchive.com/icons/giannis-zographos/south-american-football-club/256/Brazil-icon.png",
+        "location": "Mercedes-Benz Arena",
+        "matchID": "2",
+        "date": "9/24",
+        "time": "19:00",
+        "mapUrl": "https://goo.gl/maps/ynFFuhDTyo42"
+      }
+    },
+    {
+      "team": {
+        "name": "T7 vs T8",
+        "t7": "AC Milan",
+        "t7logo": "http://s25.postimg.org/5za2rst8v/ac_milan256x256.png",
+        "t8": "Inter Milan",
+        "t8logo": "http://s019.radikal.ru/i640/1210/86/82659ba30fae.png",
+        "location": "Allianz Stadium",
+        "matchID": "3",
+        "date": "9/25",
+        "time": "12:00",
+        "mapUrl": "https://goo.gl/maps/ja7jJwCw8pm"
+      }
+    }
+  ]
 }
