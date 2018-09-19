@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-  <b-navbar toggleable="md" type="dark" variant="success-outline" fixed="top">
+  <b-navbar toggleable="md" type="dark" variant="success" fixed="top">
 
   <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
@@ -16,7 +16,7 @@
 </b-navbar>
 
     
-      <img alt="logo" src="./assets/nysl_logo.png" width="35%" vspace="50">
+      <img alt="logo" src="./assets/nysl_logo.png" width="45%" vspace="30">
     <router-view></router-view>
   </div>
 </template>
