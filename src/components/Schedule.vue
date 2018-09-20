@@ -1,6 +1,24 @@
 <template>
   <div class="test">
- <div id="bodycontent">
+
+<table class="table table-hover table-dark">
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Times</th>
+          <th scope="col">Teams</th>
+          <th scope="col">Location</th>
+          <th scope="col">Map</th>
+        </tr>
+        <tr v-for="row in matches">
+          <td rowspan="2">{{ team.date }}</td>
+          <td>{{ team.time }}</td>
+          <td>{{ team.name }}</td>
+          <td>{{ team.location }}</td>
+          <td>{{ team.mapUrl }}</td>
+        </tr>
+  </table>      
+
+<!-- <div id="bodycontent">
      <h2 style="font-size:30px;color:white;"><em>Fall Schedule</em></h2>
      <p class="announcement" style="font-size:15px;color:white;">*All games take place on Saturday</p>
      
@@ -109,22 +127,38 @@
         </tr>
       </table>
     </div>
-    </div>
+    </div>-->
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Schedule'
+  name: 'Schedule',
+  data(){
+    return {
+      matches: []
+    }
+  },
+
+  methods: {
+      getMatches: function(){
+        fetch('https://api.myjson.com/bins/14bbbo')
+          .then(function(response) {
+            return response.json();
+          })
+          .then(myJson => {
+            console.log(myJson);
+            this.matches = myJson;
+          });
+      }
+  },
+  created: function() {
+    this.getMatches();
+  },
+
 }
 
-fetch('https://api.myjson.com/bins/14bbbo')
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(myJson) {
-    console.log(myJson);
-  });
+
 
 </script>
 
