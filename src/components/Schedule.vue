@@ -1,133 +1,22 @@
 <template>
   <div class="test">
 
-<table class="table table-hover table-dark">
-        <tr>
-          <th scope="col">Date</th>
-          <th scope="col">Times</th>
-          <th scope="col">Teams</th>
-          <th scope="col">Location</th>
-          <th scope="col">Map</th>
-        </tr>
-        <tr v-for="row in matches">
-          <td rowspan="2">{{ team.date }}</td>
-          <td>{{ team.time }}</td>
-          <td>{{ team.name }}</td>
-          <td>{{ team.location }}</td>
-          <td>{{ team.mapUrl }}</td>
-        </tr>
-  </table>      
-
-<!-- <div id="bodycontent">
-     <h2 style="font-size:30px;color:white;"><em>Fall Schedule</em></h2>
-     <p class="announcement" style="font-size:15px;color:white;">*All games take place on Saturday</p>
-     
-     <div id="infotable">
-       <table class="table table-hover table-dark">
-        <tr>
-          <th scope="col">SEPTEMBER</th>
-          <th scope="col">Teams</th>
-          <th scope="col">Location</th>
-          <th scope="col">Times</th>
-        </tr>
-        <tr>
-          <td rowspan="2">9/01</td>
-          <td>U1+U4</td>
-          <td>AJ Katzenmaier</td>
-          <td>9:30 a.m.</td>
-        </tr>
-        <tr>
-          <td>U3+U2</td>
-          <td>Greenbay</td>
-          <td>1:00 p.m.</td>
-        </tr>
-        <tr>
-          <td rowspan="2">9/08</td>
-          <td>U5+U6</td>
-          <td>Howard A Yeager</td>
-          <td>9:30 a.m.</td>
-        </tr>
-        <tr>
-          <td>U6+U1</td>
-          <td>Marjorie P Hart</td>
-          <td>1:00 p.m.</td>
-       <tr>
-          <td rowspan="2">9/15</td>
-          <td>U2+U4</td>
-          <td>North</td>
-          <td>9:30 a.m.</td>
-        </tr>
-        <tr>
-          <td>U3+U5</td>
-          <td>AJ Katzenmaier</td>
-          <td>1:00 p.m.</td>
-        <tr>
-          <td rowspan="2">9/22</td>
-          <td>U1+U3</td>
-          <td>South</td>
-          <td>9:30 a.m.</td>
-        </tr>
-        <tr>
-          <td>U2+U6</td>
-          <td>Howard A Yeager</td>
-          <td>1:00 p.m.</td>
-        <tr>
-          <td>9/29</td>
-          <td>U4+U5</td>
-          <td>Greenbay</td>
-          <td>9:30 a.m.</td>
-        </tr>
-        <tr>
-          <th scope="col">OCTOBER</th>
-          <th scope="col">Teams</th>
-          <th scope="col">Location</th>
-          <th scope="col">Times</th>
-        </tr>
-        <tr>
-          <td rowspan="2">10/06</td>
-          <td>U2+U5</td>
-          <td>Marjorie P Hart</td>
-          <td>9:30 a.m.</td>
-        </tr>
-        <tr>
-          <td>U1+U6</td>
-          <td>South</td>
-          <td>1:00 p.m.</td>
-        </tr>
-        <tr>
-          <td rowspan="2">10/08</td>
-          <td>U3+U4</td>
-          <td>Howard A Yeager</td>
-          <td>9:30 a.m.</td>
-        </tr>
-        <tr>
-          <td>U5+U1</td>
-          <td>Greenbay</td>
-          <td>1:00 p.m.</td>
-       <tr>
-          <td rowspan="2">10/20</td>
-          <td>U6+U3</td>
-          <td>North</td>
-          <td>9:30 a.m.</td>
-        </tr>
-        <tr>
-          <td>U2+U4</td>
-          <td>Marjorie P Hart</td>
-          <td>1:00 p.m.</td>
-        <tr>
-          <td rowspan="2">10/27</td>
-          <td>U3+U1</td>
-          <td>AJ Katzenmaier</td>
-          <td>9:30 a.m.</td>
-        </tr>
-        <tr>
-          <td>U5+U6</td>
-          <td>Howard A Yeager</td>
-          <td>1:00 p.m.</td>
-        </tr>
-      </table>
+  <div v-for="p in matches" class="row">
+    <div class="col-sm-9">
+          <h2>{{ p.team.date }} {{ p.team.time }} {{ p.team.name }}</h2>
+      <div class="row">
+       <div class="col-7 col-sm-6">
+        <img :src="p.team.t1logo">
+          <h2> {{ p.team.t1 }} </h2>
+       </div>
+       <div class="col-4 col-sm-6">
+        <img :src="p.team.t2logo">
+          <h2> {{ p.team.t2 }} </h2>
+       </div>
+      </div>
     </div>
-    </div>-->
+  </div>
+
   </div>
 </template>
 
@@ -148,7 +37,7 @@ export default {
           })
           .then(myJson => {
             console.log(myJson);
-            this.matches = myJson;
+            this.matches = myJson.Matches;
           });
       }
   },
@@ -157,16 +46,18 @@ export default {
   },
 
 }
-
-
-
 </script>
 
 
 <style scoped>
-  p{
+  h2, p{
   color: white;
   font-size: 20px;
   padding: 20px;
   }
+
+  img{
+    width: 120px;
+  }
+
 </style>
