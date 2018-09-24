@@ -12,12 +12,14 @@
     "bulma-start": "0.0.2",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
-    "vue2-sidebar": "0.0.11"
+    "vue2-sidebar": "0.0.11",
+    "vuetify": "^1.2.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.3",
     "@vue/cli-plugin-eslint": "^3.0.3",
     "@vue/cli-service": "^3.0.3",
+    "vue-cli-plugin-vuetify": "^0.2.0",
     "vue-template-compiler": "^2.5.17"
   },
   "eslintConfig": {

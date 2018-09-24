@@ -46,7 +46,7 @@ export default {
   },
   methods: {
       getMatches: function(){
-        fetch('https://api.myjson.com/bins/vp6z0')
+        fetch('https://api.myjson.com/bins/brg8k')
           .then(function(response) {
             return response.json();
           })

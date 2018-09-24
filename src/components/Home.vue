@@ -1,5 +1,5 @@
 <template>
-  <div class="test">
+<!--  <div class="test">
    <div class="box">
     <h2>August 4</h2>
        <p>NYSL Fundraiser</p>
@@ -8,7 +8,8 @@
     <h2>September 1</h2>
       <p>First Game of the Season</p>
    </div>
-  </div>
+  </div> -->
+  <div></div>
 </template>
 
 <script>

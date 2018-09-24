@@ -24,29 +24,16 @@
 <script>
 export default {
   name: 'Schedule',
+  created() {
+      this.matches = this.$route.params.propsInTeams;
+      // eslint-disable-next-line
+      console.log(this.matches);
+  },
   data(){
     return {
       matches: []
     }
   },
-
-  methods: {
-      getMatches: function(){
-        fetch('https://api.myjson.com/bins/vp6z0')
-          .then(function(response) {
-            return response.json();
-          })
-          .then(myJson => {
-            // eslint-disable-next-line
-            console.log(myJson);
-            this.matches = myJson.Matches;
-          });
-      }
-  },
-  created: function() {
-    this.getMatches();
-  },
-
 }
 </script>
 
@@ -72,6 +59,6 @@ export default {
         top: 32%;
         line-height: 150%;
         z-index: 1;
-        background: rgba(22, 44, 105, 0.4);
+        background: rgba(22, 44, 105, 0.5);
 }
 </style>
