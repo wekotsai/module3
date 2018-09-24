@@ -10,8 +10,6 @@ Vue.config.productionTip = false
 
 Vue.use(BootstrapVue);
 
-// Vue.use(Vue2Sidebar);
-
 new Vue({
   router,
   render: h => h(App)

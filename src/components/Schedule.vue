@@ -1,10 +1,10 @@
 <template>
   <div class="test">
 <div id="box">
-  <div v-for="p in matches" class="row">
+  <div v-for="(p, index) in matches" :key="index" class="row">
     <div class="col-sm-9">
           <h2>{{ p.team.date }} {{ p.team.time }} {{ p.team.name }}</h2>
-          <p>{{ p.team.location }} <a v-bind:href="p.team.mapUrl"><i class="fas fa-map-marker-alt" style="font-size:30px;color:white;"></i></a></p>
+          <p>{{ p.team.location }} <a v-bind:href="p.team.mapUrl"><i class="fas fa-map-marker-alt" style="font-size:30px;color:green;"></i></a></p>
       <div class="row">
        <div class="col-7 col-sm-6">
         <img :src="p.team.t1logo">
@@ -37,6 +37,7 @@ export default {
             return response.json();
           })
           .then(myJson => {
+            // eslint-disable-next-line
             console.log(myJson);
             this.matches = myJson.Matches;
           });
@@ -59,6 +60,7 @@ export default {
 
   img{
     width: 120px;
+    height: 120px;
   }
 
 #box{
@@ -70,6 +72,6 @@ export default {
         top: 32%;
         line-height: 150%;
         z-index: 1;
-        background: rgba(22, 44, 105, 0.5);
+        background: rgba(22, 44, 105, 0.4);
 }
 </style>

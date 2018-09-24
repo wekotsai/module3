@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import Home from './components/Home.vue';
 import Contact from './components/Contact.vue';
 import Schedule from './components/Schedule.vue';
+import Teams from './components/Teams.vue';
 
 Vue.use(VueRouter);
 
@@ -23,6 +24,11 @@ const router = new VueRouter({
             path: '/schedule',
             name: 'Schedule',
             component: Schedule,
+        },  
+        { 
+            path: '/teams',
+            name: 'Teams',
+            component: Teams,
         },  
       ],
 });
