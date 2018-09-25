@@ -5,6 +5,7 @@ import Contact from './components/Contact.vue';
 import Schedule from './components/Schedule.vue';
 import Teams from './components/Teams.vue';
 import Chatroom from './components/Chatroom.vue';
+import Login from './components/Login.vue';
 
 Vue.use(VueRouter);
 
@@ -35,6 +36,11 @@ const router = new VueRouter({
             path: '/chatroom',
             name: 'Chatroom',
             component: Chatroom,
+        }, 
+        { 
+            path: '/login',
+            name: 'Login',
+            component: Login,
         }, 
       ],
 });

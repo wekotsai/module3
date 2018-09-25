@@ -1,6 +1,8 @@
 <template>
   <div class="test">
-<div id="box">
+    <div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
   <div v-for="(p, index) in matches" :key="index" class="row">
     <div class="col-sm-9">
           <h2>{{ p.team.date }} {{ p.team.time }} {{ p.team.name }}</h2>
@@ -19,46 +21,44 @@
   </div>
 </div>
   </div>
+   </div>
+    </div>
+
 </template>
 
 <script>
-export default {
-  name: 'Schedule',
-  created() {
-      this.matches = this.$route.params.propsInTeams;
-      // eslint-disable-next-line
-      console.log(this.matches);
-  },
-  data(){
-    return {
-      matches: []
+    export default {
+        name: 'Schedule',
+        created() {
+            this.matches = this.$route.params.propsInTeams;
+            // eslint-disable-next-line
+            console.log(this.matches);
+        },
+        data() {
+            return {
+                matches: []
+            }
+        },
     }
-  },
-}
+
 </script>
 
 
 <style scoped>
-  h2, p{
-  color: white;
-  font-size: 20px;
-  padding: 20px;
-  }
+    h2,
+    p {
+        color: white;
+        font-size: 20px;
+        padding: 20px;
+    }
 
-  img{
-    width: 120px;
-    height: 120px;
-  }
+    img {
+        width: 120px;
+        height: 120px;
+    }
 
-#box{
-        max-width: auto;
-        min-width: auto;
-        padding: 15px;
-        margin-left: 0;
-        margin-right: auto;
-        top: 32%;
-        line-height: 150%;
-        z-index: 1;
-        background: rgba(22, 44, 105, 0.5);
-}
+    .modal-content {
+        background-color: rgba(22, 44, 105, 0.5);
+    }
+
 </style>

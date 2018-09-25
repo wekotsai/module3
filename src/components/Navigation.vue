@@ -66,17 +66,17 @@
 <div>
     <nav>
      <b-button-group size="md">
-      <b-button :pressed="false" variant="info">
+      <b-button :pressed="false" variant="success">
        <b-nav-item><router-link :to="{name: 'Teams', params: { propsInTeams: this.myProps } }"><i class="fas fa-futbol" style="font-size:30px;color:white;"></i></router-link></b-nav-item>
        </b-button> 
-       <b-button :pressed="false" variant="info">
+       <b-button :pressed="false" variant="success">
        <b-nav-item><router-link :to="{name: 'Schedule', params: { propsInTeams: this.myProps } }"><i class="far fa-calendar-alt" style="font-size:30px;color:white;"></i></router-link></b-nav-item>
        </b-button>
-       <b-button :pressed="false" variant="info">
+       <b-button :pressed="false" variant="success">
        <b-nav-item><router-link to="/Contact"><i class="fas fa-envelope" style="font-size:30px;color:white;"></i></router-link></b-nav-item>
        </b-button>
-       <b-button :pressed="false" variant="info">
-       <b-nav-item><router-link to="/Chatroom"><i class="fas fa-comments" style="font-size:30px;color:white;"></i></router-link></b-nav-item>
+       <b-button :pressed="false" variant="success">
+       <b-nav-item><router-link to="/login"><i class="fas fa-comments" style="font-size:30px;color:white;"></i></router-link></b-nav-item>
        </b-button>
      </b-button-group>
     </nav>
