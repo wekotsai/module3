@@ -76,6 +76,7 @@
     .modal-content {
         height: 450px;
         background-color: white;
+        overflow: scroll;
     }
 
     .btn-link {
