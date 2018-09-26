@@ -17,6 +17,7 @@
         <b-collapse is-nav id="nav_collapse">
 
           <b-navbar-nav>
+            <!--<tester :myProps="matches"></tester>-->
             <Navigation :myProps="matches"></Navigation>
           </b-navbar-nav>
 

@@ -6,6 +6,7 @@ import Schedule from './components/Schedule.vue';
 import Teams from './components/Teams.vue';
 import Chatroom from './components/Chatroom.vue';
 import Login from './components/Login.vue';
+import Maps from './components/Maps.vue';
 
 Vue.use(VueRouter);
 
@@ -41,6 +42,11 @@ const router = new VueRouter({
             path: '/login',
             name: 'Login',
             component: Login,
+        }, 
+        { 
+            path: '/maps',
+            name: 'Maps',
+            component: Maps,
         }, 
       ],
 });
