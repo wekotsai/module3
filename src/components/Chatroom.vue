@@ -4,15 +4,14 @@
     <div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-heading">
-				
 			</div>
-			<div class="modal-body">
-
-    <div id="messages">
-       <div v-for="(key, i) in messages" :key="i" class="my-speech-bubble">
-         <p>{{key.message}}</p>
-       </div>
-      </div>
+            <div class="modal-body">
+                <div id="messages">
+                    <div v-for="(key, i) in messages" :key="i" class="my-speech-bubble"
+                     :class="{right: key.name === loggedInUser}">
+                        <p>{{key.message}}</p>
+                    </div>
+                </div>
 			</div>
 		</div>
 	</div>
@@ -30,7 +29,9 @@
         name: 'Chatroom',
         data(){
             return{
-                messages:{}
+                messages: null,
+                input: '',
+                loggedInUser: null
             }
         },
         created(){
@@ -40,12 +41,13 @@
             submit() {
                 // eslint-disable-next-line 
                 console.log("write");
-                let userName = firebase.auth().currentUser.displayName;
-                let text = document.getElementById("input").value;
+                let userName = firebase.auth().currentUser.email;
+                // eslint-disable-next-line     
+                console.log(userName);
 
                 let message = {
                     name: userName,
-                    message: text
+                    message: this.input,
                 }
                 firebase.database().ref('chatroom').push(message)
                 this.input="";
@@ -59,6 +61,9 @@
             getPost() {
                 // eslint-disable-next-line     
                 console.log("getPost");
+                this.loggedInUser = firebase.auth().currentUser.email;
+                // eslint-disable-next-line     
+                console.log(this.loggedInUser);
                 firebase.database().ref('chatroom').on('value', (data) => {
                     this.messages = data.val();
                 })
@@ -76,7 +81,7 @@
 
     .modal-content {
         height: 450px;
-        background-color: white;
+        background-color: rgba(255,255,255,0.6);
         overflow: scroll;
     }
 
@@ -89,38 +94,53 @@
     }
 
     #messages {
-        display: inline-block;
-        clear: both;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     /* M E S S A G E S */
     .my-speech-bubble {
-       
         background: #34d07b;
         -webkit-border-radius: 4px;
                 border-radius: 4px;
         font-size: 1.2rem;
         line-height: 1.3;
-        margin: 0 auto 40px;
+        margin-bottom: 40px;
         max-width: auto;
         padding: 15px;
         position: relative;
     }
 
-    .my-speech-bubble p {
-        margin: 0 0 10px;
-    }
-    .my-speech-bubble p:last-of-type {
-        margin-bottom: 0;
-    }
-
-    .my-speech-bubble::after {
+    /*.my-speech-bubble::after {
         border-left: 20px solid transparent;
         border-top: 20px solid #34d07b;
         bottom: -20px;
         content: "";
         position: absolute;
         right: 20px;
+    }*/
+
+    .my-speech-bubble p {
+        margin: 0 0 10px;
     }
+
+    .my-speech-bubble p:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .right{
+        align-self: flex-end;
+        background: #4286f4;
+    }
+
+    /*.right::after {
+        border-left: 20px solid transparent;
+        border-top: 20px solid #4286f4;
+        bottom: -20px;
+        content: "";
+        position: absolute;
+        right: 20px;
+    }*/
 
 </style>

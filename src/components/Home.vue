@@ -1,14 +1,10 @@
 <template>
  <div class="test">
-   <div class="box">
-    <h2>August 4</h2>
-       <p>NYSL Fundraiser</p>
-    <h2>August 16</h2>
-       <p>Season Kick-off: Meet the Teams</p>
-    <h2>September 1</h2>
-      <p>First Game of the Season</p>
-   </div>
+ <h1>2018 World Cup Highlights</h1>
+  <div class="video-responsive">
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/Vw34wMAqWzc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </div> 
+ </div> 
 
 </template>
 
@@ -20,22 +16,22 @@ export default {
 
 
 <style scoped>
-    h2, p{
+    h1, p{
         color: white;
         font-size: 20px;
     }
 
-    .box {
-        max-width: 900px;
-        min-width: 500px;
-        text-align: left;
-        padding: 15px;
-        margin-left: 0;
-        margin-right: auto;
-        position: fixed;
-        top: 32%;
-        line-height: 150%;
-        z-index: 1;
-        background: rgba(22, 44, 105, 0.5);
-    }
+.video-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.video-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
 </style>

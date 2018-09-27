@@ -1,19 +1,19 @@
 <template>
 
 <div class="container">
-<div class="modal-dialog">
+  <div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-body">
-  <div class="row"  v-for="(p,i) in matches" :key="i">
-    <div class="col"><h1> <a v-bind:href="p.team.t1Url">{{ p.team.t1 }}</a> </h1></div>
-    <div class="col"><p> <img :src="p.team.t1logo"> </p> </div>
-    <div class="w-100"></div>
-    <div class="col"> <h1> <a v-bind:href="p.team.t2Url">{{ p.team.t2 }}</a> </h1></div>
-    <div class="col"> <p> <img :src="p.team.t2logo"> </p></div>
+        <div class="row"  v-for="(p,i) in matches" :key="i">
+          <div class="col"><h1> <a v-bind:href="p.team.t1Url">{{ p.team.t1 }}</a> </h1></div>
+          <div class="col"><p> <img :src="p.team.t1logo"> </p> </div>
+          <div class="w-100"></div>
+          <div class="col"> <h1> <a v-bind:href="p.team.t2Url">{{ p.team.t2 }}</a> </h1></div>
+          <div class="col"> <p> <img :src="p.team.t2logo"> </p></div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-</div>
-</div>
 </div>
 </template>
 
