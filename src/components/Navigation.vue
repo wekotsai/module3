@@ -14,9 +14,9 @@
        <b-button :pressed="false" variant="success">
        <b-nav-item><router-link to="/login"><i class="fas fa-comments" style="font-size:30px;color:white;"></i></router-link></b-nav-item>
        </b-button>
-       <b-button :pressed="false" variant="success">
+      <!-- <b-button :pressed="false" variant="success">
        <b-nav-item><router-link to="/maps"><i class="fas fa-map-marker-alt" style="font-size:30px;color:white;"></i></router-link></b-nav-item>
-       </b-button>
+       </b-button> -->
      </b-button-group>
     </nav>
   </div>
