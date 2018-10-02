@@ -1,21 +1,21 @@
 <template>
   <div class="test">
   <div class="container-fluid bg-light py-3">
-    <form id="contact-form" action="mailto:someone@example.com" method="post" role="form">
+    <form id="contact-form" v-bind:action="'mailto:info@nysl.com?subject=' + name + '&body=' + message" method="post" role="form">
         <div class="messages"></div>
         <div class="controls">
             <div class="row">
                 <div class="col-sm-4">
                     <div class="form-group">
                         <label for="form_name">Name *</label>
-                        <input id="form_name" type="text" name="surname" class="form-control" placeholder="Please enter your name *" required="required" data-error="name is required.">
+                        <input v-model="name" id="form_name" type="text" name="surname" class="form-control" placeholder="Please enter your name *" required="required" data-error="name is required.">
                         <div class="help-block with-errors"></div>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="form-group">
                         <label for="form_email">Email *</label>
-                        <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                        <input v-model="email" id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
                         <div class="help-block with-errors"></div>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="form_message">Message *</label>
-                    <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="send a message."></textarea>
+                    <textarea v-model="message" id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="send a message."></textarea>
                     <div class="help-block with-errors"></div>
                 </div>
             </div>
@@ -54,7 +54,14 @@
 
 <script>
 export default {
-  name: 'Contact'
+  name: 'Contact',
+  data: function() {
+        return {
+            name: '',
+            email: '',
+            message: '',
+        }
+   }
 }
 </script>
 
