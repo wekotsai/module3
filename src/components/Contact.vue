@@ -1,14 +1,14 @@
 <template>
   <div class="test">
   <div class="container-fluid bg-light py-3">
-    <form id="contact-form" v-bind:action="'mailto:info@nysl.com?subject=' + name + '&body=' + message" method="post" role="form">
+    <form id="contact-form" action="#" method="post" role="form">
         <div class="messages"></div>
         <div class="controls">
             <div class="row">
                 <div class="col-sm-4">
                     <div class="form-group">
-                        <label for="form_name">Name *</label>
-                        <input v-model="name" id="form_name" type="text" name="surname" class="form-control" placeholder="Please enter your name *" required="required" data-error="name is required.">
+                        <label for="form_name">Subject *</label>
+                        <input v-model="subject" id="form_name" type="text" name="subject" class="form-control" placeholder="Please enter your subject *" required="required" data-error="name is required.">
                         <div class="help-block with-errors"></div>
                     </div>
                 </div>
@@ -39,7 +39,8 @@
                 </div>
             </div>
             <div class="col-md-12">
-                <input type="submit" class="btn btn-success btn-send" value="Send message">
+            <a v-bind:href="'mailto:info@nysl.com?subject=' + subject + '&body=' + message">
+                <input type="button" class="btn btn-success btn-send" value="Send message"></a>
             </div>
         </div>
         <div class="row">
@@ -57,10 +58,15 @@ export default {
   name: 'Contact',
   data: function() {
         return {
-            name: '',
+            subject: '',
             email: '',
             message: '',
         }
+   },
+   watch: {
+     subject: function (val) {
+         this.subject = this.subject.replace(" ", "%20")
+     }
    }
 }
 </script>
