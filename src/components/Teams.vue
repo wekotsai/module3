@@ -10,10 +10,10 @@
 		  <div class="cours2" style="overflow:hidden;">
 				<img class="hover" :src="p.team.t1logo" style="width:120px;height:120px;border:1px solid transparent;transition:1s;">
 					<div class="cours3">
-						<h2 style="text-align:center;margin-top:-6px;color:rgb(237,78,110);">{{ p.team.t1 }}</h2>
+						
 					</div>
 					<div class="cours4 text-center">
-						<button class="cou" style="border:1px solid transparent;padding:10px 20px ;font-size:16px;border-radius:10%;background-color:rgb(237,78,110);color:white;"> <a v-bind:href="p.team.t1Url">More info</a></button>
+						<button class="cou" style="border:1px solid transparent;padding:10px 20px ;font-size:16px;border-radius:10%;background-color:rgb(237,78,110);color:white;"> <a v-bind:href="p.team.t1Url">{{ p.team.t1 }}</a></button>
 					</div>		
 		  </div>
 	  </div>
@@ -22,10 +22,10 @@
 		  <div class="cours2" style="overflow:hidden;">
 				<img class="hover" :src="p.team.t2logo" style="width:120px;height:120px;border:1px solid transparent;transition:1s;">
 					<div class="cours3">
-						<h2 style="text-align:center;margin-top:-6px;color:rgb(237,78,110);">{{ p.team.t2 }}</h2>
+					
 					</div>
 					<div class="cours4 text-center">
-						<button class="cou" style="border:1px solid transparent;padding:10px 20px ;font-size:16px;border-radius:10%;background-color:rgb(237,78,110);color:white;"> <a v-bind:href="p.team.t2Url">More info</a></button>
+						<button class="cou" style="border:1px solid transparent;padding:10px 20px ;font-size:16px;border-radius:10%;background-color:rgb(237,78,110);color:white;"> <a v-bind:href="p.team.t2Url">{{ p.team.t2 }}</a></button>
 					</div>		
 		  </div>
    	</div>
@@ -61,14 +61,7 @@ export default {
 
 
 <style scoped>
-    h1 {
-        color: white;
-        font-size: 24px;
-        margin-top: 35px;
-
-    }
-
-    p {
+  p {
         color: white;
         font-size: 20px;
     } 
@@ -87,17 +80,21 @@ export default {
     text-align:center;
     color:green;
   }
+
   .course1{
     text-align:center;
     font-family:Bradley Hand ITC;
   }
+
   .cours2{
     margin-top:30px;
   }
+
   .cours2{
     position:relative;
     margin-bottom:50px;
   }
+
   .cours3{
     -border:1px solid red;
     position:absolute;
@@ -105,15 +102,17 @@ export default {
     opacity:0;
     -bottom:100px;
     -background-color:rgba(142,198,63,.8);
-    background-color:rgba(0,0,0,0.3);
+   /* background-color:rgba(0,0,0,0.3); */
     color:white;
-    padding:10p;
+    padding:5px;
   }
+
   .cours2:hover .cours3 {
     opacity:1;
     top:0px;
     transition:1s;
   }
+
   .cours4{
     position:absolute;
     -border:1px solid red;
@@ -126,15 +125,18 @@ export default {
     -background-color:rgba(142,198,63,.8);
     background-color:rgba(0,0,0,0.3);
   }
+
   .cours2:hover .cours4{
     opacity:1;
     bottom:0;
     transition:1s;
   }
+
   .cours2:hover .hover{
-    transform:scale(1.3);
+    transform:scale(1.2);
     transition:1s;
   }
+
   .cours7{
     border:1px solid rgb(73,183,43);
     background-color:rgb(73,183,43);
@@ -143,6 +145,7 @@ export default {
     padding:10px 15px;
     border-radius:5px 20px;
   }
+
   .cours7:hover{
     background-color:transparent;
     color:rgb(73,183,43);
